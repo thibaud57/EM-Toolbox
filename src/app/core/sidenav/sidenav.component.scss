@@ -1,0 +1,49 @@
+@use '@angular/material' as mat;
+@import 'src/styles/theme.scss';
+
+mat-sidenav-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+mat-sidenav {
+    width: 100%;
+    text-align: center;
+    padding: 32px;
+}
+
+mat-list-item {
+    text-align: left;
+    margin-bottom: 8px;
+
+    mat-icon {
+        vertical-align: middle;
+    }
+    span {
+        vertical-align: middle;
+        padding-left: 8px;
+    }
+}
+
+mat-divider {
+    margin-top: 32px;
+    margin-bottom: 16px;
+    background: mat.get-color-from-palette($my-accent, 900);
+}
+
+.logo {
+    img {
+        width: 150px;
+    }
+}
+
+.title {
+    margin-bottom: 0;
+}
+
+.subtitle {
+    margin-top: 8px;
+}

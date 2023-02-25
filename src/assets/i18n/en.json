@@ -1,12 +1,15 @@
 {
-    "PAGES": {
-        "HOME": {
-            "TITLE": "App works !",
-            "GO_TO_DETAIL": "Go to Detail"
+    "pages": {
+        "sidenav": {
+            "menu": {
+                "playlist-to-csv": "Playlist to csv",
+                "moving-files": "Moving files from csv",
+                "tag-editor": "Tag editor"
+            }
         },
-        "DETAIL": {
-            "TITLE": "Detail page !",
-            "BACK_TO_HOME": "Back to Home"
+        "footer": {
+            "settings": "Settings",
+            "info": "Info"
         }
     }
 }

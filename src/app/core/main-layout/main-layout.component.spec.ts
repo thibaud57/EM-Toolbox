@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
-import { HomeComponent } from './home.component';
+import { MainLayoutComponent } from './main-layout.component';
 import { TranslateModule } from '@ngx-translate/core';
 import { RouterTestingModule } from '@angular/router/testing';
 
 describe('HomeComponent', () => {
-    let component: HomeComponent;
-    let fixture: ComponentFixture<HomeComponent>;
+    let component: MainLayoutComponent;
+    let fixture: ComponentFixture<MainLayoutComponent>;
 
     beforeEach(waitForAsync(() => {
         TestBed.configureTestingModule({
-            declarations: [HomeComponent],
+            declarations: [MainLayoutComponent],
             imports: [TranslateModule.forRoot(), RouterTestingModule],
         }).compileComponents();
 
-        fixture = TestBed.createComponent(HomeComponent);
+        fixture = TestBed.createComponent(MainLayoutComponent);
         component = fixture.componentInstance;
         fixture.detectChanges();
     }));
