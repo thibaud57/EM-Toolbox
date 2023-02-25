@@ -1,1 +1,51 @@
-<p>sidenav works!</p>
+<mat-sidenav-container [hasBackdrop]="false">
+    <mat-sidenav class="mat-elevation-z4" opened="true">
+        <!--        <div class="logo">-->
+        <!--            <img-->
+        <!--                class="avatar mat-elevation-z8"-->
+        <!--                src="../../../assets/images/Logo.png"-->
+        <!--            />-->
+        <!--        </div>-->
+
+        <h2 class="title">Empiric Mind</h2>
+        <h4 class="subtitle">Toolbox</h4>
+
+        <mat-divider></mat-divider>
+
+        <mat-nav-list>
+            <mat-list-item
+                routerLink="playlist-to-csv"
+                routerLinkActive="active"
+            >
+                <mat-icon mat-list-icon>save_as</mat-icon>
+                <span matLine>
+                    {{
+                        'pages.sidenav.menu.playlist-to-csv'
+                            | translate
+                            | uppercase
+                    }}
+                </span>
+            </mat-list-item>
+
+            <mat-list-item routerLink="moving-files" routerLinkActive="active">
+                <mat-icon>content_copy</mat-icon>
+                <span matLine>
+                    {{
+                        'pages.sidenav.menu.moving-files'
+                            | translate
+                            | uppercase
+                    }}
+                </span>
+            </mat-list-item>
+
+            <mat-list-item routerLink="tag-editor" routerLinkActive="active">
+                <mat-icon mat-list-icon>audio_file</mat-icon>
+                <span matLine>
+                    {{
+                        'pages.sidenav.menu.tag-editor' | translate | uppercase
+                    }}
+                </span>
+            </mat-list-item>
+        </mat-nav-list>
+    </mat-sidenav>
+</mat-sidenav-container>

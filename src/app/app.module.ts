@@ -11,26 +11,33 @@ import { AppRoutingModule } from './app-routing.module';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
-import { HomeModule } from './home/home.module';
-import { DetailModule } from './detail/detail.module';
-
 import { AppComponent } from './app.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { PlaylistToCsvComponent } from './playlist-to-csv/playlist-to-csv.component';
+import { MusicTagEditorComponent } from './music-tag-editor/music-tag-editor.component';
+import { MovingFilesFromCsvComponent } from './moving-files-from-csv/moving-files-from-csv.component';
+import { MatCommonModule } from '@angular/material/core';
 
 // AoT requires an exported function for factories
 const httpLoaderFactory = (http: HttpClient): TranslateHttpLoader =>
     new TranslateHttpLoader(http, './assets/i18n/', '.json');
 
 @NgModule({
-    declarations: [AppComponent],
+    declarations: [
+        AppComponent,
+        PlaylistToCsvComponent,
+        MusicTagEditorComponent,
+        MovingFilesFromCsvComponent,
+    ],
     imports: [
+        BrowserAnimationsModule,
         BrowserModule,
         FormsModule,
         HttpClientModule,
         CoreModule,
         SharedModule,
-        HomeModule,
-        DetailModule,
         AppRoutingModule,
+        MatCommonModule,
         TranslateModule.forRoot({
             loader: {
                 provide: TranslateLoader,

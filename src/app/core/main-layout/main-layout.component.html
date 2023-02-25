@@ -1,0 +1,11 @@
+<mat-grid-list cols="12" rowHeight="100%">
+    <mat-grid-tile colspan="3">
+        <app-sidenav></app-sidenav>
+    </mat-grid-tile>
+    <mat-grid-tile colspan="9" class="content">
+        <div class="container">
+            <router-outlet></router-outlet>
+            <app-footer></app-footer>
+        </div>
+    </mat-grid-tile>
+</mat-grid-list>
